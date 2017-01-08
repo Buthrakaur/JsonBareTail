@@ -6,8 +6,24 @@ import styles from './Home.css';
 
 export default class Home extends Component {
   render() {
-  	return <JsonRowList/>
+  	return (
+  		<div>
+			<FileWatchControl/>  		
+	  		<JsonRowList/>
+  		</div>
+  	)
   }
+}
+
+class FileWatchControl extends React.Component {
+	render(){
+		return (
+			<div>
+				<input type="file" name="jsonFile"/>
+				<button>Start</button>
+			</div>
+		)
+	}
 }
 
 class JsonRowList extends React.Component {
